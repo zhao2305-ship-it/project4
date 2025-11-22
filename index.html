@@ -1,21 +1,150 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Project 4 - FPS Maze</title>
+    <title>Project 4 – FPS Maze</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #0f172a;
+            color: #e5e7eb;
+        }
+        header {
+            padding: 24px 16px;
+            text-align: center;
+            background: #020617;
+            border-bottom: 1px solid #1e293b;
+        }
+        h1 {
+            margin: 0 0 8px;
+            font-size: 28px;
+        }
+        h2 {
+            margin-top: 32px;
+            font-size: 22px;
+        }
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 24px 16px 40px;
+        }
+        a {
+            color: #38bdf8;
+        }
+        a.button {
+            display: inline-block;
+            padding: 10px 18px;
+            border-radius: 6px;
+            border: 1px solid #38bdf8;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 8px;
+        }
+        a.button:hover {
+            background: #0f172a;
+        }
+        .section {
+            margin-bottom: 32px;
+        }
+        .screenshots {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-top: 12px;
+        }
+        .shot {
+            background: #020617;
+            border-radius: 8px;
+            padding: 8px;
+            border: 1px solid #1e293b;
+        }
+        .shot img {
+            width: 100%;
+            border-radius: 4px;
+            display: block;
+        }
+        .shot p {
+            margin: 6px 4px 2px;
+            font-size: 14px;
+            color: #9ca3af;
+        }
+        code {
+            background: #020617;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 90%;
+        }
+    </style>
 </head>
 <body>
-    <h1>Project 4 - FPS Maze</h1>
-    <p>Author: Chenzhi Zhao</p>
+<header>
+    <h1>Project 4 – FPS Maze</h1>
+    <p>First-person maze game using SDL2 + OpenGL</p>
+</header>
 
-    <h2>Download</h2>
-    <p><a href="./project4_test.exe">Download Executable</a></p>
+<main>
+    <section class="section">
+        <h2>Download</h2>
+        <p>
+            Windows build (zip / exe) is hosted on Google Drive:
+        </p>
+        <p>
+            <a class="button"
+               href="https://drive.google.com/file/d/1hsmaelZScucM5Vqts1oLOyfgsyjIvP7E/view?usp=sharing"
+               target="_blank" rel="noopener noreferrer">
+                Download Project4 build
+            </a>
+        </p>
+    </section>
 
-    <h2>Screenshots</h2>
-    <img src="./pic1.png" width="400">
-    <img src="./pic2.png" width="400">
+    <section class="section">
+        <h2>Controls</h2>
+        <ul>
+            <li><code>W / S</code> – move forward / backward</li>
+            <li><code>A / D</code> – strafe left / right</li>
+            <li><code>Q / E</code> or arrow keys – turn left / right</li>
+            <li><code>Space</code> – jump</li>
+            <li>Pick up green cubes (keys) to open matching doors</li>
+            <li>Purple cube gives a temporary speed boost</li>
+        </ul>
+    </section>
 
-    <h2>Description</h2>
-    <p>This is an FPS maze project built with SDL2 + OpenGL...</p>
+    <section class="section">
+        <h2>Screenshots</h2>
+        <div class="screenshots">
+            <div class="shot">
+                <img src="start.png" alt="Game start view">
+                <p>Start position in the maze.</p>
+            </div>
+
+            <div class="shot">
+                <!-- filename has spaces and [ ] so we URL-encode them -->
+                <img src="get%20the%20green%20cube%5Bkey%5D.png" alt="Pick up the green key cube">
+                <p>Pick up the green cube (key) to unlock doors.</p>
+            </div>
+
+            <div class="shot">
+                <img src="pass%20the%20blue%20door%20and%20reach%20the%20door.png"
+                     alt="Passing the blue door after unlocking">
+                <p>After collecting the key, you can pass the blue door and move deeper into the maze.</p>
+            </div>
+
+            <div class="shot">
+                <img src="jump.png" alt="Jumping in the maze">
+                <p>Jump movement inside the maze.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Notes</h2>
+        <ul>
+            <li>Keyboard layout should be set to English so <code>WASD</code> works correctly.</li>
+            <li>This project was built and tested with MSYS2, SDL2, GLEW, and modern OpenGL.</li>
+        </ul>
+    </section>
+</main>
 </body>
 </html>
